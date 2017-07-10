@@ -11,10 +11,8 @@
 def arithmetic2(a, b)
     if a < b
        puts a.to_f*0.5
-    elsif a > b
+    else a > b
        puts b.to_f*0.5
-    else
-      puts a.to_f*0.5 ,  b.to_f*0.5
     end
 end
 
