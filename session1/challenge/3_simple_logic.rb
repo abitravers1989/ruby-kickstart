@@ -8,7 +8,7 @@
 # ten_twenty(6) # => 10
 
 def ten_twenty(n)
-
+    n.to_i!
    puts 10 if n.even?
    puts 20 if n.odd?
 
