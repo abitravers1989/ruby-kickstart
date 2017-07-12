@@ -9,16 +9,17 @@ class String
 
 
 
-  def every_other_char (string_1)
+  def every_other_char
 #split the string into an array of it's characters
-  string_2 = string_1.to_a
 
+  string_2 = self.to_a
+  returns_this = ""
     string_2.each_with_index do |character, index_nr|
         if index_nr %2 == 0 then
-        print "#{character}"
+        returns_this << character
       end
-    end
 
-end
+    returns_this
+    end
 
 end
