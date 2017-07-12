@@ -7,3 +7,18 @@
 # get_squares [25, 4, 9, 6, 50, 16, 5] # => [4, 5]
 
 # This time you will have to define the method, it's called: get_squares
+class Sqares
+
+  def initialize
+    "does this always have to be here?"
+  end
+
+  attr_accessor :arr
+
+def get_squares(arr)
+  arr.to_i.to_a
+  select {|n| arr.include? n * n? }.sort!
+  p arr
+end
+
+end
