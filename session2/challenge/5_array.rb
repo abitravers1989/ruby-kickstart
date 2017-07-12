@@ -18,7 +18,7 @@
 
 def mod_three (array)
  three = array.map {|n| n % 3}
- three.delete '0'
+ three.delete(0)
  p three
 end
 
