@@ -12,14 +12,19 @@ class String
   def every_other_char
 #split the string into an array of it's characters
 
-  string_2 = self.to_a
   returns_this = ""
+#not quite sure why it is using the self object here
+  string_2 = self.split("").to_a
     string_2.each_with_index do |character, index_nr|
         if index_nr %2 == 0 then
-        returns_this << character
+          returns_this << character
       end
+    end
 
-    returns_this
+    p returns_this
     end
 
 end
+
+"abcdefg".every_other_char
+"".every_other_char
