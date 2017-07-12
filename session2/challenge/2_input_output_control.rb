@@ -20,19 +20,19 @@
 # and when you think it is correct, you can test it with  $ rake 2:2
 
 def hi_hi_goodbye
+  puts "give me a number"
+  @input = input 
+  counter = 0
+while input != "bye" || input != "Bye" || input != "BYE"
   input = gets.chomp!
   input.to_i
-  counter = 0
-  Loop do
-    break if input == "bye"
-      Loop do
-      break if counter == input
-      print "hi"
-      counter += 1
-      end
-    end
-  # your code here
-end 
+  puts "hi"
+  break if counter == input
+  counter += 1
+end
+
+end
+
 
 
 
