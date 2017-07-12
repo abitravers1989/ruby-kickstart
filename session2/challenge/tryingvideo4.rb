@@ -12,6 +12,8 @@ class Car
 
 end
 
+#from the outside we are always calling methods NOT variables ..
+#on the inside of the class we are setting variables 
 car = Car.new
 #Car is the class object and .new is a method stored within this class
 car.miles_2 1000
