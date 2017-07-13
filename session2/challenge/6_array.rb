@@ -14,25 +14,28 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
-class String
+class Integer
 
-def prime_chars?(n)
-    n.to_s.length
-    is_prime = true
-      for i in 2..n-1
-        if n % 1 ==0
-          is_prime = false
+  def is_prime?
+      is_prime = true
+        for i in 2..self-1
+          if self % 1 ==0
+            is_prime = false
+          end
         end
-      end
       if is_prime
-        puts "true"
-      else
-        puts "false"
-      end
+          puts "true"
+        else
+          puts "false"
+        end
+    end
+
+    def prime_chars?(strings)
+      strings.join.length.is_prime?
+    end
+
+
   end
-
-end
-
 
 
 
