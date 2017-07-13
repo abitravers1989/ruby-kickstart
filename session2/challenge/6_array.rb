@@ -14,18 +14,27 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
+class String
 
+def prime_chars?(n)
+    n.to_s.length
+    is_prime = true
+      for i in 2..n-1
+        if n % 1 ==0
+          is_prime = false
+        end
+      end
+      if is_prime
+        puts "true"
+      else
+        puts "false"
+      end
+  end
 
-def prime_chars?(Array.new(arr)
-
-    require 'prime'
-    nr = arr.length 
-    Prime.each(nr) do |prime|
-      p prime
-    end
 end
 
 
 
-prime_chars['abcd']
-prime_chars['abc']
+
+prime_chars?['abcd']
+prime_chars?['abc']
