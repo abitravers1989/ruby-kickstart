@@ -21,17 +21,8 @@ new_string.select.with_index do |value, index|
     if (index %2 == 0) then
       return_this.push(value)
     end
-  p return_this
+  p return_this.join(" ")
 end
  end
 
 alternate_words("Can't we all get along?")
-
-=beging
-it is return
-["cant"]
-["cant"]
-["cant", "all"]
-["cant", "all"]
-["cant", "all", "along"]
-=end 
