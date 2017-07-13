@@ -18,7 +18,8 @@ new_string = array.downcase.gsub(/[^a-z0-9\s]/i, '').split
 
 return_this = []
 new_string.select.with_index do |value, index|
-    if (index %2 == 0) then
+
+    if ((index %2 == 0) && (index == [-1])) then
       return_this.push(value)
     end
   p return_this.join(" ")
