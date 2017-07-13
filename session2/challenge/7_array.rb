@@ -19,11 +19,21 @@ new_string = array.downcase.gsub(/[^a-z0-9\s]/i, '').split
 return_this = []
 new_string.select.with_index do |value, index|
 
-    if ((index %2 == 0) && (index == [-1])) then
+    if (index %2 == 0) then
       return_this.push(value)
     end
-  p return_this.join(" ")
-end
- end
+  long_array= return_this.join(" ")
 
+  i = 0
+  k = -1
+
+nr = long_array.length
+
+ nr
+
+long_array.split(nr)
+
+end
+
+end
 alternate_words("Can't we all get along?")
