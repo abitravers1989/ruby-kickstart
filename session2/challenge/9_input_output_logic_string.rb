@@ -24,9 +24,19 @@
 # USER:     BYE
 
 def deaf_grandma
-
+input = gets.chomp!
+while input != input.upcase
+  puts "HUH?! SPEAK UP, SONNY!"
+  input = gets.chomp!
+end
+while input == input.upcase && input != "BYE"
+puts "not since 19"+rand(3..5).to_s+"0"
+input = gets.chomp!
+end
+if input == "BYE" then puts "bye"
 end
 
+end
 
 
 
