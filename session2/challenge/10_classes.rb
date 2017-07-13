@@ -16,13 +16,17 @@
 #
 
 class Person
-  attr_reader :name, :age, :birthday
 
-  def initialize(name, age, birthday=age)
+  attr_accessor 'name', 'age'
+
+  def initialize(name, age)
     @name = name
-    @birthday = birthday
     @age = age
   end
+
+def birthday
+  @age += 1
+end
 
 end
 
@@ -30,4 +34,4 @@ end
 
 josh = Person.new 'Josh', 28
 
-p "New person name #{josh.name} ages #{josh.age}"
+p "New person name #{josh.name} ages #{josh.age} #{josh.birthday}"
