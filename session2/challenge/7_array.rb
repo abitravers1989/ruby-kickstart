@@ -14,7 +14,9 @@ def alternate_words(array)
 #was finding it hard to do a gsub or delete with the characters as the hash etc
 #kept breaking it .. Answer from stackoverflow
 #testing this out now in irb hence not as many revisions of the challenge
-new_string = array.downcase.gsub(/[^a-z0-9\s]/i, '').split
+
+  new_string = array.downcase.gsub(/[^a-z0-9\s]/i, '').split
+
 
 return_this = []
 new_string.select.with_index do |value, index|
@@ -24,14 +26,7 @@ new_string.select.with_index do |value, index|
     end
   long_array= return_this.join(" ")
 
-  i = 0
-  k = -1
-
-nr = long_array.length
-
- nr
-
-long_array.split(nr)
+p long_array
 
 end
 

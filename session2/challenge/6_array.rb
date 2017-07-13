@@ -14,9 +14,7 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
-class Integer
-
-  def is_prime?
+def is_prime?()
       is_prime = true
         for i in 2..(self-1)
           if (self % i) ==0
@@ -31,11 +29,9 @@ class Integer
         end
     end
 
-    def prime_chars?(strings)
-      strings.join.length.is_prime?
-    end
+def using_it(strings)
+    p  strings.join.length.is_prime?
+end
 
 
-  end
-
-prime_chars? ('abcd') 
+using_it('abcd')
