@@ -16,9 +16,10 @@
 # prime_chars? ['a', 'b', 'cd']   # => false
 
 
-def prime_chars?(n)
+def prime_chars?(Array.new(arr)
+
     require 'prime'
-    n.length = nr
+    nr = arr.length 
     Prime.each(nr) do |prime|
       p prime
     end
@@ -26,5 +27,5 @@ end
 
 
 
-prime_chars?['abcd']
-prime_chars?['abc']
+prime_chars['abcd']
+prime_chars['abc']
