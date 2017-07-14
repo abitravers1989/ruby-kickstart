@@ -10,9 +10,18 @@
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
 
 def alternate_words(words)
-  arr = words.split.map {|x|x.gsub(/[^'0-9A-Za-z]/, '')}
-  arr.delete_if {|x| x == ""}.select.with_index {|x, i| i.even?}
+  "!@$#%^&*()-=_+[]:;,./<>?\\|".split('').each do |char|
+    words = words.gsub(char, ' ')
+  end
+  sentence_2 = []
+  sentence = words.split
+  sentence.select.with_index do |y, i|
+      sentence_2 << y if i.even?
+  end
+  p sentence_2
 end
+
+
 
 alternate_words("Can't we all get along?")
 alternate_words("Lorem ipsum dolor sit amet.")
