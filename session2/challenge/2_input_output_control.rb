@@ -20,24 +20,26 @@
 # and when you think it is correct, you can test it with  $ rake 2:2
 
 def hi_hi_goodbye
-  puts "give me a number"
-  @input = input 
-  counter = 0
-while input != "bye" || input != "Bye" || input != "BYE"
-  input = gets.chomp!
-  input.to_i
-  puts "hi"
-  break if counter == input
-  counter += 1
+
+def speak_to_user
+  puts "Enter a number"
+  answer = gets.chomp
 end
 
+answer = speak_to_user
+
+while answer != "bye"
+  answer.to_i.times {print "hi "}
+  print "\n"
+  answer = speak_to_user
+end
+
+  puts "Goodbye"
+
+
 end
 
 
 
 
-
-# This will just invoke the method if you run this program directly
-# This way you can try it out by running "$ ruby 2_input_output_control.rb"
-# but it will still work for our tests
 hi_hi_goodbye if $0 == __FILE__
