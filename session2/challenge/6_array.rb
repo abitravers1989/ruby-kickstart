@@ -14,24 +14,18 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
-def is_prime?()
-      is_prime = true
-        for i in 2..(self-1)
-          if (self % i) ==0
-            is_prime = false
-          end
-        end
 
-      if is_prime
-          puts "true"
-        else
-          puts "false"
-        end
-    end
 
-def using_it(strings)
-    p  strings.join.length.is_prime?
+#prime number is a number which is divisable only by itself and 1
+
+def prime_chars?(strings)
+
+nr_to_test = strings.length
+
+return false if nr_to_test <= 1
+Math.sqrt(nr_to_test).to_i.downto(2).each {|i| return false if nr_to_test % i ==0}
+true
 end
 
-
-using_it('abcd')
+prime_chars?('abcd')
+prime_chars? ['ab', 'cd']
