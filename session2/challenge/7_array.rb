@@ -9,26 +9,12 @@
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
 
-def alternate_words(array)
-
-#was finding it hard to do a gsub or delete with the characters as the hash etc
-#kept breaking it .. Answer from stackoverflow
-#testing this out now in irb hence not as many revisions of the challenge
-
-  new_string = array.downcase.gsub(/[^a-z0-9\s]/i, '').split
-
-
-return_this = []
-new_string.select.with_index do |value, index|
-
-    if (index %2 == 0) then
-      return_this.push(value)
-    end
-  long_array= return_this.join(" ")
-
-p long_array
-
+def alternate_words(words)
+  arr = words.split.map {|x|x.gsub(/[^'0-9A-Za-z]/, '')}
+  arr.delete_if {|x| x == ""}.select.with_index {|x, i| i.even?}
 end
 
-end
 alternate_words("Can't we all get along?")
+alternate_words("Lorem ipsum dolor sit amet.")
+alternate_words("Would a yes dating don’t")
+alternate_words("Don't DON'T, don't")
