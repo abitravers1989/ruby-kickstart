@@ -19,11 +19,12 @@
 #prime number is a number which is divisable only by itself and 1
 
 def prime_chars?(strings)
+strings = strings.to_s
+nr_to_test = strings.split(//).delete_if{ |x| x == " "}
+num = nr_to_test.length
 
-nr_to_test = strings.length
-
-return false if nr_to_test <= 1
-Math.sqrt(nr_to_test).to_i.downto(2).each {|i| return false if nr_to_test % i ==0}
+return false if num <= 1
+Math.sqrt(num).to_i.downto(2).each {|i| return false if num % i ==0}
 true
 end
 
