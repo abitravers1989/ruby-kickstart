@@ -31,6 +31,13 @@ class BeerSong
     end
   end
 
+numString = ''
+
+onesPlace = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+
+
+
+
   def print_song
     while @nr_bottles != 0
     puts @nr_bottles.to_s + 'botles of beer on the wall'
