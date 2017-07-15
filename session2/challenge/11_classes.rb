@@ -19,47 +19,44 @@
 # Then make a public method called print_song that outputs all stanzas from the number of bottles of beer down to zero.
 # Add any additional methods you find helpful.
 
-class BeerSong
+class Beersong
 
-  def initialize (nr_bottles)
-    if nr_bottles < 0
-      @nr_bottles = 0
-    elsif nr_bottles > 99
-      @nr_bottles = 99
+  attr_accessor :beer
+
+
+  def initialize (beer)
+    if beer < 0
+      @beer = 0
+    elsif beer > 99
+      @beer = 99
     else
-      @nr_bottles = nr_bottles.to_i
+      @beer = beer
     end
   end
 
-numString = ''
-
-onesPlace = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
 
-
-
-  def print_song
-    while @nr_bottles != 0
-    puts @nr_bottles.to_s + 'botles of beer on the wall'
-    puts @nr_bottles.to_s + 'bottles of beer'
-    @nr_bottles = @nr_bottles - 1
+  def song_lyrics
+    while @beer != 0
+    puts @beer.humanize + 'botles of beer on the wall'
+    puts @beer.humanize + 'bottles of beer'
+    @beer = @beer - 1
     puts "takes one down, pass it around"
 
-    if @nr_bottles == 1
-      puts @nr_bottles.to_s + 'bottle of beer on the wall'
+    if @beer == 1
+      puts @beer.humanize + 'bottle of beer on the wall'
     else
-      puts @nr_bottles.to_s + 'bottle of beer on the wall'
+      puts @beer.humanize + 'bottle of beer on the wall'
     end
 
-    if @nr_bottles == 0
+    if @beer == 0
       puts "END"
     end
 
   end
 end
 
-  public :print_song
 
 end
 
-BeerSong.new 77
+hey = Beersong.new 33
