@@ -10,16 +10,8 @@
 
 
 #need to pass code below parameters
-(nr_given)
+def starircase(nr_given)
 
-integer_hash = [*[Array(starting from 0 increment numbers which are odd up to the nr_given) , Array(starting from 0 increment numbers which are odd up to the nr_given).transpose.flattern]]
-key array   upto(nr_given)
-value array up_to(nr_given) next if (i %2) != 0
-#need to work out how to increment values and if up_to is method
+integer_hash = [*[*(0..nr_given).select {|x| x.odd?} , *(0..nr_given).select {|x| x.even?}.transpose.flattern]]
 
-#creating the arrays for the key and values
-keys=
-a = *(0..nr_given)
-a.select do |x|
-    if (x%2)==0
 end
