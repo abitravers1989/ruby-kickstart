@@ -21,8 +21,9 @@
 
 class Beersong
 
-  attr_accessor :beer
 
+
+  attr_accessor :beer
 
   def initialize (beer)
     if beer < 0
@@ -30,33 +31,38 @@ class Beersong
     elsif beer > 99
       @beer = 99
     else
-      @beer = beer
+      @beer = beer.to_i
     end
   end
 
-
-
+#had to look at solutions from here
   def song_lyrics
-    while @beer != 0
-    puts @beer.humanize + 'botles of beer on the wall'
-    puts @beer.humanize + 'bottles of beer'
-    @beer = @beer - 1
-    puts "takes one down, pass it around"
 
-    if @beer == 1
-      puts @beer.humanize + 'bottle of beer on the wall'
-    else
-      puts @beer.humanize + 'bottle of beer on the wall'
-    end
-
-    if @beer == 0
-      puts "END"
-    end
-
+    bottle_count = @beer
+    bootle_count.downto(0) do |x|
+    puts "#{humanize(x)}" + "#{x==1 ? "bottle" : "bottles"}of beer on the wall"
+    puts "#{humanize(x)}" + "#{x==1 ? "bottle" : "bottles"}of beer"
+    puts "Take one down, pass it around,"
+    puts "#{humanize(x-1)}" "#{x-1 ==1 ? "bottle" : "bottles"} of beer on the wall"
   end
-end
+
+#Looked at the solution for this
+def humanize(n)
+  teens = %w(zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)
+  tens = %w(twenty thirty forty fifty sixty seventy eighty ninety)
+  if n >=0 && n <= 19
+    "#{teens[n].capitalize}"
+  elsif n % 10 == 0
+    "#{teens[n/10-2].capitalize}"
+  else
+    "#{teens[n/10-2].capitalize}- #{teens[n %10]}"
+  end
 
 
 end
 
-hey = Beersong.new 33
+
+end
+end
+
+Beersong.new 33
