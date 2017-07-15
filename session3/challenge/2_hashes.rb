@@ -13,8 +13,9 @@
 def starircase(nr_given)
 
 return_hash  = Hash.new
-  *(0..nr_given).select {|x| x.odd?}
-      return_hash[x] = *(0..nr_given).select {|x| x.even?}
+  (0..nr_given).to_a.select do |x|
+    if x.odd?
+      return_hash[x] = (0..nr_given).to_a.select {|x| x if x.even?}
     end
 end
 
