@@ -5,3 +5,17 @@
 # There will be no punctuation in the strings.
 #
 # first_pos "The dog and the cat and the cow" # => {"The" => 0, "dog" => 1, "and" => 2, "the" => 3, "cat" => 4, "cow" => 7}
+
+
+def first_pos (string)
+  words =string.split(' ')
+  encountered = Hash.new(0)
+  words.each_with_index do |word, ind|
+#cannot use the << method as it is a hash not an array
+    encountered << word[ind]
+  end
+return encountered
+end
+
+
+first_pos "The dog and the cat and the cow"
