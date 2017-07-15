@@ -8,12 +8,12 @@
 
 
 def first_pos (string)
-  words =string.split(' ')
-  encountered = Hash.new(0)
-  words.each_with_index do |word, ind|
-#cannot use the << method as it is a hash not an array
-    encountered << word[ind]
+  array =string.split(' ')
+  encountered = Hash.new
+  array.each do |s|
+    encountered [s] = array.index(s)
   end
+
 return encountered
 end
 
