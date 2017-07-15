@@ -5,8 +5,7 @@
 
 def reverse_map(n, &block)
   arr = []
-  arr << n.reverse_map!
-  block.call.arr
+  arr << n.reverse_map!(&block)
   return arr
 end
 
