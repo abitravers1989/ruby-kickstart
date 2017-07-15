@@ -5,24 +5,17 @@ def your_sort(array, &block)
 # a and b are elements in the array
     block ||= Proc.new {|a, b| a <=> b}
 
-#using bubble sort method
-num = array.length
+#using bubble sort method ... Now taken from solution 
+array.each_with_index do |index_1|
+    array.each_with_index |index_2|
 
-Loop do
-  (num-1).times do |i|
-    ordered = block.call(array[i], array[i+1])
-      array [i], array [i+1] = array [i+1], array [i]
+    ordered = block.call(array[index_1], array[index_2])
+      array [index_1], array [index_2] = array [index_2], array [index_1] if ordered < 0
 end
 
 end
-
-break if ordered > 0
-
 end
 
-array
-
-end
 
 k = [4,5,6,2,3,4,5,6,6,63,11,1,]
 your_sort (k)
