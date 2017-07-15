@@ -12,6 +12,11 @@
 #need to pass code below parameters
 def starircase(nr_given)
 
-integer_hash = [*[*(0..nr_given).select {|x| x.odd?} , *(0..nr_given).select {|x| x.even?}.transpose.flattern]]
+return_hash  = Hash.new
+  *(0..nr_given).select {|x| x.odd?}
+      return_hash[x] = *(0..nr_given).select {|x| x.even?}
+    end
+end
 
+    return_hash
 end
