@@ -1,3 +1,38 @@
+def your_sort(array, &block)
+
+#Looked at solution for this. ||= means setting a variable, in this case block, if the values were nothing .
+#This is setting it to the spaceship operator if the block had not been set by user.
+# a and b are elements in the array
+    block ||= Proc.new {|a, b| a <=> b}
+
+#using bubble sort method
+num = array.length
+
+Loop do
+  (num-1).times do |i|
+    ordered = block.call(array[i], array[i+1])
+      array [i], array [i+1] = array [i+1], array [i]
+end
+
+end
+
+break if ordered > 0
+
+end
+
+array
+
+end
+
+k = [4,5,6,2,3,4,5,6,6,63,11,1,]
+your_sort (k)
+
+
+
+
+
+
+
 # Build your own sort method. It does not have to be fancy, any sort will do.
 # There are many listed here: http://en.wikipedia.org/wiki/Sorting_algorithm#Summaries_of_popular_sorting_algorithms
 #
@@ -51,6 +86,3 @@
 #     a_class_val <=> b_class_val
 #   end
 # end       # => ["a", "m", "r", 1, 3, 4, 9, 2.5, 9.0, 25.8]
-
-def your_sort
-end
