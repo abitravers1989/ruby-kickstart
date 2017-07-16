@@ -7,3 +7,19 @@
 #
 # print_list_in_reverse head   # >> "1\n2\n"
 
+
+
+def reverse(head)
+    if head == nil then retrun "empty"
+
+  arr = []
+
+loop do
+  arr << head[:date]
+  head = head[:next]
+  break if head  == nil
+end
+
+arr.reverse.each {|x| print '#{x}'}
+
+end
