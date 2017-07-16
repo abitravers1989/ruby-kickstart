@@ -38,3 +38,17 @@
 # middle head                        # => 3
 # head = {:data => 6, :next => head}
 # middle head                        # => 3
+
+
+
+def middle (options={})
+  hash = options
+  hash = ('foo'=>1, 'bar'=>3);
+  %count = keys %hash;
+  res = []
+  hash.map do |k, v|
+    res << "#{k}" if v-(%count)==0
+  end
+retrun res
+
+end
