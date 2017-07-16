@@ -40,7 +40,7 @@
 # middle head                        # => 3
 # arrays. But this block takes two arguments, the key and value
 
-def middle_one (head)
+def middle_one(head)
 node_1 = 0
 node_2 = 0
 while head[:next] != nil
@@ -54,9 +54,11 @@ while node_2 < node_1/2
   node_2 += 1
 end
 
-p head [:next]
+p head [:data]
 
 end
+
+#not sure why this is returning nil? ... oooo because i am currently returning the value not the data
 
 head = {:data => 5, :next => head}
 middle_one (head)
