@@ -15,3 +15,16 @@
 # head = {:data => 6, :next => head}
 # print_list head                    # >> "6\n5\n4\n3\n2\n1\n"
 
+
+# arrays. But this block takes two arguments, the key and value
+
+
+def printing_elements(hash)
+
+
+  while hash != nil
+    puts hash[:date]
+    hash = hash[:next]
+  end
+
+end
