@@ -38,17 +38,25 @@
 # middle head                        # => 3
 # head = {:data => 6, :next => head}
 # middle head                        # => 3
+# arrays. But this block takes two arguments, the key and value
 
+def middle_one (head)
+node_1 = 0
+node_2 = 0
+while head[:next] != nil
 
-
-def middle (options={})
-  hash = options
-  hash = ('foo'=>1, 'bar'=>3);
-  %count = keys %hash;
-  res = []
-  hash.map do |k, v|
-    res << "#{k}" if v-(%count)==0
+  head = head[:next]
+    node_1 +=2
   end
-retrun res
+
+while node_2 < node_1/2
+  head = head[:next]
+  node_2 += 1
+end
+
+p head [:next]
 
 end
+
+head = {:data => 5, :next => head}
+middle_one (head)
